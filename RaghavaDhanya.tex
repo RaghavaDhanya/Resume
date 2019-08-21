@@ -1,15 +1,17 @@
-
 \documentclass[10pt]{article}
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[a4paper,includeheadfoot, left=.7in,right=.7in,top=.3in,bottom=.2in]{geometry}
+\usepackage[a4paper,includeheadfoot, left=.7in,right=.7in,top=.15in,bottom=.15in]{geometry}
 \usepackage[compact]{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fontawesome} 
+\usepackage[notmath]{sansmathfonts}
+
 \hypersetup{ colorlinks=false, } 
-\titleformat{\section}{\color{accentblue}\titlerule[0.8pt]\Large\bfseries\scshape}{}{0pt}{}[{\titlerule[0.8pt]}]
+\titleformat{\section}{\color{accent}\titlerule[0.8pt]\Large\bfseries\scshape}{}{0pt}{}[{\titlerule[0.8pt]}]
+\renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty}
 \urlstyle{same} 
 \setlength{\parskip}{0pt} 
@@ -21,7 +23,27 @@
 \setlength{\partopsep}{0pt}
 \definecolor{vividred}{RGB}{194,41,65}
 \definecolor{anotherred}{HTML}{D32F2F}
-\definecolor{accentblue}{HTML}{255CF2}
+
+
+\definecolor{accent}{HTML}{3182c8}
+\definecolor{accent_light}{HTML}{63a1d8}
+\definecolor{accent_lighter}{HTML}{aad4f5}
+\definecolor{accent_lightest}{HTML}{eff8ff}
+\definecolor{accent_dark}{HTML}{2368a2}
+\definecolor{accent_darker}{HTML}{1a4971}
+\definecolor{accent_darkest}{HTML}{12283a}
+
+
+\definecolor{grey}{HTML}{b8c4ce}
+\definecolor{grey_light}{HTML}{cfd6dd}
+\definecolor{grey_lighter}{HTML}{e1e7ec}
+\definecolor{grey_lightest}{HTML}{f8f9fa}
+\definecolor{grey_dark}{HTML}{8895a7}
+\definecolor{grey_darker}{HTML}{5e6b7a}
+\definecolor{grey_darkest}{HTML}{212934}
+
+\renewcommand{\textbf}[1]{{\bfseries\sffamily\color{accent_darkest}#1}}
+
 \begin{document}
 \thispagestyle{empty}
 
@@ -46,13 +68,31 @@
 %%%%%%%%%%%%%%%%%%%%%
 % Experience %
 %%%%%%%%%%%%%%%%%%%%%
-\section*{Experience} \textbf{Technology Developer,} \textit{notNULL},
-Bengaluru \hfill [\textit{February 2016 - July 2016}]\\
+\section*{Experience} 
+\textbf{Trainee Decision Scientist,} \textit{Innovation \& Development, Mu Sigma Labs},
+ Bengaluru \hfill \textcolor{grey_darker}{[\textit{July 2018 - Present]}}
+\begin{itemize}
+    \itemsep0em
+
+\item 
+Analysed and developed a model for identifying customers who are likely to churn out of telecom operator
+using R.
+\item 
+Setup a custom Kubernetes cluster on in-house systems for application deployment using Kubeadm.
+\item 
+Wrote a CI/CD script for build (Docker image), test and auto deploy stateless application to Kubernetes
+cluster.
+\item 
+Built an application to scrape and classify the Reddit comments on any given subreddit and thread based
+on specific Mu Sigma usecase, using python and Scikit-learn.
+\end{itemize}
+\textbf{Technology Developer,} \textit{notNULL},
+Bengaluru \hfill \textcolor{grey_darker}{[\textit{February 2016 - July 2016}]}\\
 Worked on developing a verification technology for events.
 \medskip
 \\
 \textbf{Software Development Intern,} \textit{Supertext}, Bengaluru
-\hfill [\textit{August 2016 - December 2016}]\\
+\hfill \textcolor{grey_darker}{[\textit{August 2016 - December 2016}]}\\
 Developed an android app for company communication with vendors using
 parse and firebase as backend. 
 %%%%%%%%%%%%%%%%%%%%%
@@ -62,19 +102,19 @@ parse and firebase as backend.
 % Education %
 %%%%%%%%%%%%%%%%%%%%%
 \section*{Education} \textbf{Bachelor of Engineering,} computer science
-and engineering \hfill [\textit{2014-present}]\\
+and engineering \hfill \textcolor{grey_darker}{[\textit{2014-2018}]}\\
 Aggregate: \textit{75.92\%}\\
 Electives: \textbf{\textit{`Pattern Recognition', `Artificial Intelligence',
 `Clouds,Grids and Clusters'.}}\\
 \textit{Sir M. Visvesvaraya Institute of Technology,} Bengaluru
 \medskip
 \\
-\textbf{Machine Learning} by Stanford University on Coursera.\hfill [\textit
-{March 2017 - July 2017}]\\
+\textbf{Machine Learning} by Stanford University on Coursera.\hfill  \textcolor{grey_darker}{[\textit
+{March 2017 - July 2017}]}\\
 Certificate earned on July 21, 2017
 \medskip\\ 
-\textbf{Neural Networks and Deep Learning} by Deeplearning.ai on Coursera.\hfill [\textit
-{February 2018 - March 2018}]\\
+\textbf{Neural Networks and Deep Learning} by Deeplearning.ai on Coursera.\hfill  \textcolor{grey_darker}{[\textit
+{February 2018 - March 2018}]}\\
 Certificate earned on March 4, 2018 
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -93,49 +133,43 @@ Others: Numpy, Scipy, Git, Unix/Linux, Windows.
 %%%%%%%%%%%%%%%%%%%%%
 \section*{Projects}
 
-\textbf{\underline{%\large\href{https://github.com/abhijith0505/Tonite}
-{Image Regeneration with Generative Models}}}\hfill[\textit{March 2018 - May 2018}]\\
-An approach to use newly introduced CapsNet as a discriminator in Generative Adversarial Network and demonstrate its application using semantic inpainting on MNIST and face images.\\
-\textit{Technologies used: Keras, Tensorflow, python.}
+\textbf{\underline{\href{https://github.com/abhijith0505/Tonite}
+{Image Regeneration with Generative Models}}} | \textit{Keras, Tensorflow, python.}\hfill\textcolor{grey_darker}{[\textit{March 2018 - May 2018}]}\\
+An approach to use newly introduced CapsNet as a discriminator in Generative Adversarial Network and demonstrate its application using semantic inpainting on MNIST and face images.
 \smallskip
 \\
-\textbf{\underline{\large\href{https://github.com/abhijith0505/Tonite}
-{Tonite}}}\hfill[\textit{April 2016}]\\
+\textbf{\underline{\href{https://github.com/abhijith0505/Tonite}
+{Tonite}}} | \textit{Android, Java.}\hfill\textcolor{grey_darker}{[\textit{April 2016}]}\\
 Wardrobe assistant app to keep track of the clothes and gives purchase
 suggestions based on events in user's calendar. Built at Hackerramp
-2016 (16th and 17th April ), Myntra office Bangalore.\\
-\textit{Technologies used: Android, Java, XML.}
+2016 (16th and 17th April ), Myntra office Bangalore.
 \smallskip
 \\
-\textbf{\underline{\large\href{https://github.com/RaghavaDhanya/ReMorse}
-{ReMorse}}}\hfill[\textit{April 2017}]
+\textbf{\underline{\href{https://github.com/RaghavaDhanya/ReMorse}
+{ReMorse}}}  | \textit{C++, OpenGL, Box2D} \hfill\textcolor{grey_darker}{[\textit{April 2017}]}
 \\
-A 2D side scrolling game which tries to subconsciously teach Morse Code.\\
-\textit{Technologies used: C++, OpenGL, Box2D}
+A 2D side scrolling game which tries to subconsciously teach Morse Code.
 \smallskip
 \\
-\textbf{\underline{\large\href{https://github.com/RaghavaDhanya/Codesnap}
-{Codesnap}}}\hfill[\textit{August 2016}]
+\textbf{\underline{\href{https://github.com/RaghavaDhanya/Codesnap}
+{Codesnap}}} | \textit{Chrome developer tools, JavaScript, CSS,HTML. }
+\hfill\textcolor{grey_darker}{[\textit{August 2016}]}
 \\
 A chrome extension which adds copy button to code segments in most
-websites, also provides a clipboard history.\\
-\textit{Technologies used: Chrome developer tools, JavaScript, CSS,
-HTML. }
+websites, also provides a clipboard history.
 \smallskip
 \\
-\textbf{\underline{\large\href{https://github.com/RaghavaDhanya/FileHide}
-{FileHide}}}\hfill[\textit{May 2016}]
+\textbf{\underline{\href{https://github.com/RaghavaDhanya/FileHide}
+{FileHide}}} | \textit{Python, Tkinter.}\hfill\textcolor{grey_darker}{[\textit{May 2016}]}
 \\
 A cross platform app which hides one file in another, the host will
-still work normally.\\
-\textit{Technologies used: Python, Tkinter.}
+still work normally.
 \smallskip
 \\
-\textbf{\underline{\large\href{https://github.com/RaghavaDhanya/Snake}
-{Snake}}}\hfill[\textit{December 2015}]
+\textbf{\underline{\href{https://github.com/RaghavaDhanya/Snake}
+{Snake}}} | \textit{Python, Pygame.} \hfill\textcolor{grey_darker}{[\textit{December 2015}]}
 \\
-Simple, classic and cross platform snake game.\\
-\textit{Technologies used: Python, Pygame.} 
+Simple, classic and cross platform snake game.
 %%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
