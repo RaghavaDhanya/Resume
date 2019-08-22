@@ -2,16 +2,16 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[a4paper,includeheadfoot, left=.7in,right=.7in,top=.15in,bottom=.15in]{geometry}
+\usepackage[a4paper,includeheadfoot, left=.7in,right=.7in,top=.12in,bottom=0mm]{geometry}
 \usepackage[compact]{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
 \usepackage{fontawesome} 
-\usepackage[notmath]{sansmathfonts}
+% \usepackage[notmath]{sansmathfonts}
 
 \hypersetup{ colorlinks=false, } 
 \titleformat{\section}{\color{accent}\titlerule[0.8pt]\Large\bfseries\scshape}{}{0pt}{}[{\titlerule[0.8pt]}]
-\renewcommand{\familydefault}{\sfdefault}
+% \renewcommand{\familydefault}{\sfdefault}
 \pagestyle{empty}
 \urlstyle{same} 
 \setlength{\parskip}{0pt} 
@@ -42,10 +42,11 @@
 \definecolor{grey_darker}{HTML}{5e6b7a}
 \definecolor{grey_darkest}{HTML}{212934}
 
-\renewcommand{\textbf}[1]{{\bfseries\sffamily\color{accent_darkest}#1}}
+\renewcommand{\textbf}[1]{{\bfseries\color{accent_darkest}#1}}
 
 \begin{document}
 \thispagestyle{empty}
+
 
 \begin{center}
  \textbf{\textsc{\color{anotherred}\Huge Raghava Dhanya}}\\[10pt] %\rule{\textwidth}{.4pt}
@@ -73,18 +74,13 @@
  Bengaluru \hfill \textcolor{grey_darker}{[\textit{July 2018 - Present]}}
 \begin{itemize}
     \itemsep0em
-
-\item 
-Analysed and developed a model for identifying customers who are likely to churn out of telecom operator
-using R.
-\item 
-Setup a custom Kubernetes cluster on in-house systems for application deployment using Kubeadm.
-\item 
-Wrote a CI/CD script for build (Docker image), test and auto deploy stateless application to Kubernetes
-cluster.
-\item 
-Built an application to scrape and classify the Reddit comments on any given subreddit and thread based
-on specific Mu Sigma usecase, using python and Scikit-learn.
+    \item Currently working on High Velocity Time Series usecase - An application for High velocity trading with Statistical arbitrage techniques 
+    \item Complete ownership of an internal analytical automation tool based on BPMN, delivered about 6 builds  -- [\textit{Won a Spot Award}] 
+    \item R\&D work on developing an analytical application on Cloud(GCP, AWS, Azure) -- [\textit{Won a Spot Award}]
+    \item Analysed and developed a model for identifying customers who are likely to churn out of telecom operator
+    using R.
+    \item Built an application to scrape and classify the Reddit comments on any given subreddit and thread based
+    on specific Mu Sigma usecase, using python and Scikit-learn.
 \end{itemize}
 \textbf{Technology Developer,} \textit{notNULL},
 Bengaluru \hfill \textcolor{grey_darker}{[\textit{February 2016 - July 2016}]}\\
@@ -133,7 +129,7 @@ Others: Numpy, Scipy, Git, Unix/Linux, Windows.
 %%%%%%%%%%%%%%%%%%%%%
 \section*{Projects}
 
-\textbf{\underline{\href{https://github.com/abhijith0505/Tonite}
+\textbf{\underline{\href{https://github.com/RaghavaDhanya/Rudolf}
 {Image Regeneration with Generative Models}}} | \textit{Keras, Tensorflow, python.}\hfill\textcolor{grey_darker}{[\textit{March 2018 - May 2018}]}\\
 An approach to use newly introduced CapsNet as a discriminator in Generative Adversarial Network and demonstrate its application using semantic inpainting on MNIST and face images.
 \smallskip
@@ -151,14 +147,14 @@ suggestions based on events in user's calendar. Built at Hackerramp
 A 2D side scrolling game which tries to subconsciously teach Morse Code.
 \smallskip
 \\
-\textbf{\underline{\href{https://github.com/RaghavaDhanya/Codesnap}
-{Codesnap}}} | \textit{Chrome developer tools, JavaScript, CSS,HTML. }
-\hfill\textcolor{grey_darker}{[\textit{August 2016}]}
-\\
-A chrome extension which adds copy button to code segments in most
-websites, also provides a clipboard history.
-\smallskip
-\\
+% \textbf{\underline{\href{https://github.com/RaghavaDhanya/Codesnap}
+% {Codesnap}}} | \textit{Chrome developer tools, JavaScript, CSS,HTML. }
+% \hfill\textcolor{grey_darker}{[\textit{August 2016}]}
+% \\
+% A chrome extension which adds copy button to code segments in most
+% websites, also provides a clipboard history.
+% \smallskip
+% \\
 \textbf{\underline{\href{https://github.com/RaghavaDhanya/FileHide}
 {FileHide}}} | \textit{Python, Tkinter.}\hfill\textcolor{grey_darker}{[\textit{May 2016}]}
 \\
@@ -178,6 +174,7 @@ Simple, classic and cross platform snake game.
 \section*{Activities and Interests}
 \begin{itemize}
  \itemsep0em
+ \item Won two "Spot Award" within 6 months for my work in Mu Sigma Labs
  \item 
  Won First prize in annual departmental project exhibition 2018 for the project "Image Regeneration with Generative Models" out of 40\texttt{+} teams.
  \item 
@@ -185,11 +182,9 @@ Simple, classic and cross platform snake game.
  \item
  Organized many events as a core member college coding club CodeShack.
  \item
- Active participant in Competitive coding, Hackathons and Conferences.
+ Active participant in Competitive coding, Hackathons and Conferences. \hfill\textcolor{grey_darker}{[\underline{\href{https://www.codechef.com/users/raghavadhanya}{Codechef profile}}]}
  \item
  Volunteered for android app development for college fest Kalanjali-2015.
- \item
- Graphic designing, designed many posters and banners for college events
  \item
  Lance corporal, National Cadet Corps – Air Wing (High school)
 
