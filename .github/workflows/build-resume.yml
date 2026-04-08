@@ -1,0 +1,39 @@
+name: Build Resume PDF
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Compile LaTeX
+        uses: xu-cheng/latex-action@e2f99d4b3685b0da93f97e1b86ad8fab81105098 # v3
+        with:
+          root_file: RaghavaDhanya.tex
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: resume-pdf
+          path: RaghavaDhanya.pdf
+
+  release:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: resume-pdf
+
+      - name: Create or update release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: latest
+          name: Latest Resume
+          files: RaghavaDhanya.pdf
+          make_latest: true
