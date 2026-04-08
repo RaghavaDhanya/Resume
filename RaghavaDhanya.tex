@@ -2,7 +2,7 @@
 
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[a4paper,includeheadfoot, left=.7in,right=.7in,top=.12in,bottom=0mm]{geometry}
+\usepackage[a4paper,includeheadfoot, left=.6in,right=.6in,top=.45in,bottom=0.45in]{geometry}
 \usepackage[compact]{titlesec}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
@@ -17,8 +17,8 @@
 \setlength{\parskip}{1pt} 
 \setlength{\parsep}{1pt}
 \setlength{\headsep}{1pt} 
-% \setlength{\topskip}{0pt} 
-% \setlength{\topmargin}{0pt} 
+\setlength{\topskip}{0pt} 
+\setlength{\topmargin}{0pt} 
 \setlength{\topsep}{1pt} 
 \setlength{\partopsep}{1pt}
 \definecolor{vividred}{RGB}{194,41,65}
@@ -43,7 +43,10 @@
 \definecolor{grey_darkest}{HTML}{212934}
 
 \renewcommand{\textbf}[1]{{\bfseries\color{accent_darkest}#1}}
-
+\newenvironment{leftindented}%
+  {\list{}{\leftmargin=0.5in}\item[]}%
+  {\endlist}
+  
 \begin{document}
 \thispagestyle{empty}
 
@@ -56,12 +59,14 @@
 % social %
 %%%%%%%%%%%%%%%%%%%%%
 \begin{center}
- \href{mailto:raghavadhanya@gmail.com}{\faEnvelope\ raghavadhanya@gmail.com}
+ \href{mailto:dm@ragv.in}{\faEnvelope\ dm@ragv.in}
  \ | \ %
  \href{tel:9148995472}{\faPhoneSquare\ 9148995472} \ | \ %
  \href{https://github.com/RaghavaDhanya}{ \underline{\faGithubSquare\
  GitHub}} \ | \ \href{https://in.linkedin.com/in/raghavadhanya}{\underline
  {\faLinkedinSquare\ LinkedIn}} 
+ | \ \href{https://ragv.in}{\underline
+ {\faExternalLinkSquare\ ragv.in}} 
 \end{center}
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -69,40 +74,96 @@
 %%%%%%%%%%%%%%%%%%%%%
 % Experience %
 %%%%%%%%%%%%%%%%%%%%%
-\section*{Experience} 
-\textbf{Data Scientist,} \textit{Bright Money},
- Bengaluru \hfill \textcolor{grey_darker}{[\textit{September 2019 - Present}]}
+\section*{Experience}
+\ 
+
+\large\textsc{\textbf{Linkedin}}\normalsize%\hfill \textcolor{grey_darker}{[\textit{Apr 2021 - Present}]}
+\begin{leftindented}
+\textbf{Senior Software Engineer, Machine Learning} \hfill \textcolor{grey_darker}{[\textit{Jun 2024 - Present}]}
 \begin{itemize}
     \itemsep0em
-    \item Developed and deployed scalable ML components for Bright's Smart Banking Platform in Django.
-    \item Developed models to forecast cashflows of an user (income, expenses).
-    \item Designed and developed monetization platform for auto billing and charging users affecting 1000s of users daily.
-    \item Developed ensemble models to infer missing data in user account data.
-    \item Developed a model to categorize transactions.
+    \item Built a multi-LLM system for account review that matches human-expert quality while scaling to \textbf{100x} the accounts, reducing metrics turnaround multiple times faster.
+    \item Built a system that generates targeted synthetic training data by identifying model weaknesses, improving multiple Trust classifiers by \textbf{2+\%} on key metrics.
+    \item Designed and built an adversarial system for automated red teaming of LLM agents, completing \textbf{30+} certifications, \textbf{1000+} audits, and \textbf{6+} scheduled regression registrations.
+    \item Fixed and improved GAI evaluation pipeline, eliminating a \textbf{13\%} category misclassification rate in evaluator metrics.
+    \item Improved Trust evaluator recall from \textbf{<10\%} to \textbf{60.5\%} on harmful content categories for LLM response evaluation.
 \end{itemize}
-\textbf{Trainee Decision Scientist,} \textit{Innovation \& Development, Mu Sigma Labs},
- Bengaluru \hfill \textcolor{grey_darker}{[\textit{July 2018 - September 2019}]}
+\end{leftindented}
+
+\large\textsc{\textbf{Glance, Inmobi}}\normalsize%\hfill \textcolor{grey_darker}{[\textit{Apr 2021 - Present}]}
+\begin{leftindented}
+\textbf{Staff Machine Learning Engineer 1 } \hfill \textcolor{grey_darker}{[\textit{Jan 2024 - Jun 2024}]}
 \begin{itemize}
     \itemsep0em
-    \item Designed and built scalable data pipelines(streaming) and models for High velocity trading platform.
-    \item Complete ownership of an internal analytical automation tool based on BPMN(3000+ users)  -- [\textit{Spot Award}] 
-    \item R\&D work on developing an analytical application on Cloud(GCP, AWS, Azure) -- [\textit{Spot Award}]
-    \item Developed a model for identifying customers who are likely to churn out of telecom operator using R.
+    \item Designed and developed a streaming recommendation library used by over \textbf{60} recommendation flows at Glance using Pyspark and spark structured streaming
+\end{itemize}
+\textbf{Machine Learning Engineer 3 } \hfill \textcolor{grey_darker}{[\textit{Jul 2022 - Dec 2023}]}
+\begin{itemize}
+    \itemsep0em
+    \item Designed and developed Glance's experimentation platform and low latency experiment serving with \textbf{<5ms} latency at \textbf{50K} requests per second.
+    \item Designed and developed a model serving system for deploying large and long running models, utilized by $\sim10$ Glance's Generative AI services running 15K inferences per day.
+    \item Trained and deployed a multimodal NSFW classifier.
+    \item Reduced costs of our largest model and model router by 4X by rewriting them in Golang. \quad\quad\textcolor{grey_darker}{[\href{https://ai.ragv.in/posts/golang-for-machine-learning-serving/}{Blog \textcolor{grey_dark}{\faExternalLinkSquare}} \href{https://www.youtube.com/watch?v=BkiPjUQr9yI}{Talk \textcolor{grey_dark}{\faExternalLinkSquare}}]}
+    \item Sped up model serving of our largest model by 3x by converting them to C++ and using Cython as bridge to run in python. \textcolor{grey_darker}{[\href{https://ai.ragv.in/posts/python-with-a-dash-of-cpp-optimizing/}{Blog \textcolor{grey_dark}{\faExternalLinkSquare}}]}
+    \item Deployed many off the shelf models for content generation including Whisper, Autoflip, Super-Resolution, Instance segmentation
+\end{itemize}
+\textbf{Data Scientist 2 } \hfill \textcolor{grey_darker}{[\textit{Apr 2021 - Jul 2022}]}
+\begin{itemize}
+    \itemsep0em
+    \item  Developed a low-latency model serving framework for serving 10's of millions of users daily and performing up to 8 million predictions per second. Used by over 200 models at Glance
+    \item Developed and deployed a low latency  model routing framework for online routing of traffic to models for experimentation with single digit latency overhead.
+    \item Replicated/Trained and productionised state of the art Synthetic media models for content generation
+    \item Built state of the art semantic text-Image and image-Image search system with <50ms latency over half a million images.
+    \item Migration of entire ML stack from Azure to GCP. Built necessary glue components/ platforms.
+\end{itemize}
+\end{leftindented}
+
+\large\textsc{\textbf{Bright Money}}\normalsize%\hfill \textcolor{grey_darker}{[\textit{Sep 2019 - Apr 2021}]}
+\begin{leftindented}
+\textbf{Data Scientist} \hfill \textcolor{grey_darker}{[\textit{Jan 2021 - Apr 2021}]}
+\begin{itemize}
+    \itemsep0em
+    \item Developed models to forecast cashflows of an user at source, date granularity (income, expenses).
+    \item Overdraft Prediction model to predict if a new transaction will overdraft on ACH.
+    \item Designed and developed monetization platform for auto billing and charging users affecting 10000s of users daily.
+\end{itemize}
+
+\bigskip
+
+\textbf{Junior Research Scientist} \hfill \textcolor{grey_darker}{[\textit{Sep 2019 - Jan 2021}]}
+\begin{itemize}
+    \itemsep0em
+    \item Developed and deployed scalable ML services for Bright's Smart Banking Platform in Django.
+    \item Developed ensemble models to infer missing data in user account data.
+    \item Developed a model to categorize transactions to get consistent categories across multiple data sources.
+\end{itemize}
+\end{leftindented}
+
+\large\textsc{\textbf{Mu Sigma Labs}}\normalsize%\hfill \textcolor{grey_darker}{[\textit{Sep 2019 - Apr 2021}]}
+\begin{leftindented}
+\textbf{Trainee Decision Scientist}\hfill \textcolor{grey_darker}{[\textit{Jul 2018 - Sep 2019}]}
+\begin{itemize}
+    \itemsep0em
+    \item Designed and built scalable streaming data pipelining platform and models for High velocity trading platform.\textcolor{grey_darker}{[\href{https://ai.ragv.in/posts/high-velocity-trading-ml-systems/}{Blog \textcolor{grey_dark}{\faExternalLinkSquare}}]}
+    \item Complete ownership of an internal analytical automation/ pipeline tool based on BPMN. Used by 100s of critical pipelines and 3000+ users  -- [\textit{Spot Award}] \textcolor{grey_darker}{[\href{https://ai.ragv.in/posts/bpmn-pipeline-platform/}{Blog \textcolor{grey_dark}{\faExternalLinkSquare}}]}
+    % \item R\&D work and wrote a white-paper on developing an analytical application on Cloud(GCP, AWS, Azure) -- [\textit{Spot Award}]
+    \item Developed a model for identifying customers who are likely to churn out of telecom operator.
     \item Built an application to scrape and classify the Reddit comments on any given subreddit based on specific Mu Sigma usecase, using python and Scikit-learn.
 \end{itemize}
+\end{leftindented}
 % \textbf{Technology Developer,} \textit{notNULL},
 % Bengaluru \hfill \textcolor{grey_darker}{[\textit{February 2016 - July 2016}]}
 % \begin{itemize}
 %     \itemsep0em
 %     \item Worked on developing a verification technology for events.
 % \end{itemize}
-\medskip
-\textbf{Software Development Intern,} \textit{Supertext.ai}, Bengaluru
-\hfill \textcolor{grey_darker}{[\textit{August 2015 - December 2015}]}
-\begin{itemize}
-    \item Developed an android app for company communication with vendors using
-    parse and firebase as backend.     
-\end{itemize}
+% \medskip
+% \textbf{Software Development Intern,} \textit{Supertext.ai}, Bengaluru
+% \hfill \textcolor{grey_darker}{[\textit{Aug 2015 - Dec 2015}]}
+% \begin{itemize}
+%     \item Developed an android app for company communication with vendors using
+%     parse and firebase as backend.     
+% \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%
 
 
@@ -111,25 +172,26 @@
 %%%%%%%%%%%%%%%%%%%%%
 \section*{Education} \textbf{Bachelor of Engineering,} Computer Science
 and Engineering \hfill \textcolor{grey_darker}{[\textit{2014-2018}]}\\
-Aggregate: \textit{75.92\%}\ |\ Electives: \textbf{\textit{`Pattern Recognition', `Artificial Intelligence',
+Aggregate: \textit{75.92\%}\ |\ First Class Distinction
+\\ Electives: \textbf{\textit{`Pattern Recognition', `Artificial Intelligence',
 `Clouds,Grids and Clusters'.}}\\
 \textit{Sir M. Visvesvaraya Institute of Technology,} Bengaluru
 \medskip
 \\
 \textbf{Machine Learning} by Stanford University on Coursera.\hfill  \textcolor{grey_darker}{[\textit
-{March 2017 - July 2017}]}
+{Mar 2017 - Jul 2017}]}
 \medskip\\ 
 \textbf{Neural Networks and Deep Learning} by Deeplearning.ai on Coursera.\hfill  \textcolor{grey_darker}{[\textit
-{February 2018 - March 2018}]}\\
+{Feb 2018 - Mar 2018}]}\\
 %%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%
 % skills %
 %%%%%%%%%%%%%%%%%%%%%
-\section*{Skills} 
-\textbf{Programming languages}: C/C++, Python, Java, R, Shell.\\
-\textbf{Frameworks}: Django, Flask, Spring Boot, Keras, Tensorflow.\\
-\textbf{Technologies}: Amazon Web Services, Continuous Integration/Delivery, Docker, Kubernetes, Kafka. 
+% \section*{Skills} 
+% \textbf{Programming languages}: C/C++, Python, Golang, Java, Shell.\\
+% \textbf{Frameworks}: FastAPI, Django, Spring Boot, GoFiber, Keras, Tensorflow, Pytorch.\\
+% \textbf{Technologies}: GCP, AWS, Continuous Integration/Delivery, Helm, Docker, K8s, Kafka. 
 %%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%
@@ -138,18 +200,18 @@ Aggregate: \textit{75.92\%}\ |\ Electives: \textbf{\textit{`Pattern Recognition'
 \section*{Projects}
 
 \textbf{\underline{\href{https://github.com/RaghavaDhanya/Rudolf}
-{Image Regeneration with Generative Models}}} | \textit{Keras, Tensorflow, python.}\hfill\textcolor{grey_darker}{[\textit{March 2018 - May 2018}]}\\
-An approach to use newly introduced CapsNet as a discriminator in Generative Adversarial Network and demonstrate its application using semantic inpainting on MNIST and face images.
+{Image Regeneration with Generative Models \faExternalLinkSquare}}} | \textit{Keras, Tensorflow, Python.}\hfill\textcolor{grey_darker}{[\textit{May 2018}]}\\
+An approach to use CapsNet as a discriminator in Generative Adversarial Network and demonstrate its application using semantic inpainting on MNIST and face images.
 \smallskip
 \\
 \textbf{\underline{\href{https://github.com/RaghavaDhanya/ReMorse}
-{ReMorse}}}  | \textit{C++, OpenGL, Box2D} \hfill\textcolor{grey_darker}{[\textit{April 2017}]}
+{ReMorse \faExternalLinkSquare}}}  | \textit{C++, OpenGL, Box2D} \hfill\textcolor{grey_darker}{[\textit{April 2017}]}
 \\
 A 2D side scrolling game which tries to subconsciously teach Morse Code.
 \smallskip
 \\
 \textbf{\underline{\href{https://github.com/abhijith0505/Tonite}
-{Tonite}}} | \textit{Android, Java.}\hfill\textcolor{grey_darker}{[\textit{April 2016}]}\\
+{Tonite \faExternalLinkSquare}}} | \textit{Android, Java.}\hfill\textcolor{grey_darker}{[\textit{April 2016}]}\\
 Wardrobe assistant app to keep track of the clothes and gives purchase
 suggestions based on events in user's calendar. Built at Hackerramp
 2016 (16th and 17th April ), Myntra office Bangalore.
@@ -182,20 +244,23 @@ suggestions based on events in user's calendar. Built at Hackerramp
 \section*{Activities and Achievements}
 \begin{itemize}
  \itemsep0em
+ \item Won 4 Bravo awards at LinkedIn
+ \item Won Hermione Granger Award at Glance Inmobi
+ \item Won Multiple Avengers Awards at Glance Inmobi
  \item Won two "Spot Award" within 6 months for my work in Mu Sigma Labs
  \item 
  Won First prize in annual departmental project exhibition 2018 for the project "Image Regeneration with Generative Models" out of 40\texttt{+} teams.
  \item 
  Twice second placed in coding and debugging competitions conducted during college fests.
- \item
- Presented technical seminar on "Quantum Machine Learning" 
- \item
- Active participant in Competitive coding, Hackathons and Conferences. \hfill\textcolor{grey_darker}{[\underline{\href{https://www.codechef.com/users/raghavadhanya}{Codechef profile}}]}
- \item
- Presented a technical paper on "Process Scheduling optimization in OS using Machine Learning" at Papyrus
- 8 (Intra-college event)
- \item
- Volunteered for android app development for college fest Kalanjali-2015.
+ % \item
+ % Presented technical seminar on "Quantum Machine Learning" 
+ % % \item
+ % % Active participant in Competitive coding, Hackathons and Conferences. \hfill\textcolor{grey_darker}{[\underline{\href{https://www.codechef.com/users/raghavadhanya}{Codechef profile}}]}
+ % \item
+ % Presented a technical paper on "Process Scheduling optimization in OS using Machine Learning" at Papyrus
+ % 8 (Intra-college event)
+ % \item
+ % Volunteered for android app development for college fest Kalanjali-2015.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%
 
